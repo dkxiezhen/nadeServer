@@ -1,0 +1,28 @@
+{
+  "name": "nodeserver",
+  "version": "0.1.0",
+  "description": "node server test",
+  "main": "app.js",
+  "dependencies": {
+    "mongodb": "^2.2.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkxiezhen/nadeServer.git"
+  },
+  "keywords": [
+    "node",
+    "server",
+    "express"
+  ],
+  "author": "xiezhen <dkxiezhen@126.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkxiezhen/nadeServer/issues"
+  },
+  "homepage": "https://github.com/dkxiezhen/nadeServer#readme"
+}
