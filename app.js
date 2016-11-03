@@ -4,7 +4,7 @@ var app = express()
 
 
 //设置server文件
-var port = process.env.PORT || 8989
+var port = process.env.PORT || 12121
 app.listen(port)
 if (app.get('env') === 'development') {
 	app.use(function(err, req, res, next){
@@ -20,12 +20,14 @@ app.set('views','./views')
 app.set('view engine','jade')
 
 //设置路由
-app.get('/',function(req, res){
-	res.render('index', {title: 'Hey', message: 'hello boy'})
-})
-app.get('/login',function(req,res){
-	res.send('login')
-})
+var dataApi = require('./routes/dataApi')
+var uiApi = require('./routes/uiApi')
+
+// app.get('/',function(){
+// 	res.render('index',{title: 'index', message: 'hello world!'})
+// })
+app.use('/', uiApi)
+app.use('/api', dataApi)
 
 
 
