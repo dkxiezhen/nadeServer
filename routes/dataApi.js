@@ -3,7 +3,7 @@ var dataApi = express.Router()
 
 //设置路由的中间件
 dataApi.use(function(req, res, next){
-    //console.log('Time: ', Date.new())
+    console.log('Time: ', Date.new())
     next()
 })
 
