@@ -1,4 +1,5 @@
 var express = require('express')
+var cookieParser = require('cookie-parser')
 
 var app = express()
 
@@ -14,6 +15,7 @@ if (app.get('env') === 'development') {
 		})
 	})
 }
+app.use(cookieParser())
 
 //设置模板文件目录
 app.set('views','./views')
